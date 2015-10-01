@@ -13,6 +13,7 @@
 		42097D031BBC3A4C00F22AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42097D021BBC3A4C00F22AE2 /* Assets.xcassets */; };
 		42097D061BBC3A4C00F22AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42097D041BBC3A4C00F22AE2 /* LaunchScreen.storyboard */; };
 		42097D111BBC3A4C00F22AE2 /* UIBarButtonWithNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42097D101BBC3A4C00F22AE2 /* UIBarButtonWithNumberTests.swift */; };
+		42097D1C1BBC3AF800F22AE2 /* BarButtonNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42097D1B1BBC3AF800F22AE2 /* BarButtonNumber.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		42097D0C1BBC3A4C00F22AE2 /* UIBarButtonWithNumberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIBarButtonWithNumberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		42097D101BBC3A4C00F22AE2 /* UIBarButtonWithNumberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBarButtonWithNumberTests.swift; sourceTree = "<group>"; };
 		42097D121BBC3A4C00F22AE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42097D1B1BBC3AF800F22AE2 /* BarButtonNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarButtonNumber.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				42097CFB1BBC3A4C00F22AE2 /* AppDelegate.swift */,
 				42097CFD1BBC3A4C00F22AE2 /* ViewController.swift */,
+				42097D1B1BBC3AF800F22AE2 /* BarButtonNumber.swift */,
 				42097CFF1BBC3A4C00F22AE2 /* Main.storyboard */,
 				42097D021BBC3A4C00F22AE2 /* Assets.xcassets */,
 				42097D041BBC3A4C00F22AE2 /* LaunchScreen.storyboard */,
@@ -199,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42097CFE1BBC3A4C00F22AE2 /* ViewController.swift in Sources */,
+				42097D1C1BBC3AF800F22AE2 /* BarButtonNumber.swift in Sources */,
 				42097CFC1BBC3A4C00F22AE2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
