@@ -15,10 +15,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let customButton = UIButton(frame: CGRectMake(0, 0, 20, 20))
+        let customButton = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         
-        customButton.addTarget(self, action: Selector("showNotification"), forControlEvents: UIControlEvents.TouchUpInside)
-        customButton.setImage(UIImage(named: "myVoice"), forState: UIControlState.Normal)
+        customButton.addTarget(self, action: #selector(showNotification), for: UIControlEvents.touchUpInside)
+        customButton.setImage(UIImage(named: "myVoice"), for: UIControlState())
         
         barButton.initWithButton(customButton)
 
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         barButton.badgeOriX = 13
         barButton.badgeOriY = -9
         
-        self.navigationItem.leftBarButtonItem = barButton
+        navigationItem.leftBarButtonItem = barButton
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -35,37 +35,35 @@ class ViewController: UIViewController {
 
 
     func showNotification() {
-        
-        print("show notification")
-        
+
         barButton.removeBadge()
         barButton.resetBadge()
     }
     
-    @IBAction func addNotification(sender: AnyObject) {
+    @IBAction func addNotification(_ sender: AnyObject) {
         
         barButton.badgeValue = String(Int(barButton.badgeValue)! + 1)
     }
     
-    @IBAction func changeColor(sender: UIButton) {
+    @IBAction func changeColor(_ sender: UIButton) {
 
-        if sender.selected {
+        if sender.isSelected {
             
-            barButton.badgeColor = UIColor.redColor()
-            barButton.badgeTextColor = UIColor.whiteColor()
+            barButton.badgeColor = UIColor.red
+            barButton.badgeTextColor = UIColor.white
         }
         else {
             
-            barButton.badgeColor = UIColor.whiteColor()
-            barButton.badgeTextColor = UIColor.blackColor()
+            barButton.badgeColor = UIColor.white
+            barButton.badgeTextColor = UIColor.black
         }
         
-        sender.selected = !sender.selected;
+        sender.isSelected = !sender.isSelected
     }
     
-    @IBAction func changePosition(sender: UIButton) {
+    @IBAction func changePosition(_ sender: UIButton) {
         
-        if (sender.selected) {
+        if (sender.isSelected) {
             
             barButton.badgeOriX = 13
             barButton.badgeOriY = -9
@@ -74,7 +72,7 @@ class ViewController: UIViewController {
             barButton.badgeOriX = -10
             barButton.badgeOriY = 5
         }
-        sender.selected = !sender.selected;
+        sender.isSelected = !sender.isSelected
     }
 
     

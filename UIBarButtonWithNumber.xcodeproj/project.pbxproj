@@ -13,7 +13,7 @@
 		42097D031BBC3A4C00F22AE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42097D021BBC3A4C00F22AE2 /* Assets.xcassets */; };
 		42097D061BBC3A4C00F22AE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42097D041BBC3A4C00F22AE2 /* LaunchScreen.storyboard */; };
 		42097D111BBC3A4C00F22AE2 /* UIBarButtonWithNumberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42097D101BBC3A4C00F22AE2 /* UIBarButtonWithNumberTests.swift */; };
-		42097D1C1BBC3AF800F22AE2 /* BarButtonNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42097D1B1BBC3AF800F22AE2 /* BarButtonNumber.swift */; settings = {ASSET_TAGS = (); }; };
+		42097D1C1BBC3AF800F22AE2 /* BarButtonNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42097D1B1BBC3AF800F22AE2 /* BarButtonNumber.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -149,10 +149,12 @@
 					42097CF71BBC3A4C00F22AE2 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = YM62LBZ4XN;
+						LastSwiftMigration = 0830;
 					};
 					42097D0B1BBC3A4C00F22AE2 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = YM62LBZ4XN;
+						LastSwiftMigration = 0830;
 						TestTargetID = 42097CF71BBC3A4C00F22AE2;
 					};
 				};
@@ -334,6 +336,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phuot.UIBarButtonWithNumber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -345,6 +348,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phuot.UIBarButtonWithNumber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -356,6 +360,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phuot.UIBarButtonWithNumberTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIBarButtonWithNumber.app/UIBarButtonWithNumber";
 			};
 			name = Debug;
@@ -368,6 +373,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = phuot.UIBarButtonWithNumberTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIBarButtonWithNumber.app/UIBarButtonWithNumber";
 			};
 			name = Release;
@@ -391,6 +397,7 @@
 				42097D171BBC3A4C00F22AE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		42097D181BBC3A4C00F22AE2 /* Build configuration list for PBXNativeTarget "UIBarButtonWithNumberTests" */ = {
 			isa = XCConfigurationList;
@@ -399,6 +406,7 @@
 				42097D1A1BBC3A4C00F22AE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

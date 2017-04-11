@@ -24,12 +24,12 @@ class BarButtonNumber : UIBarButtonItem {
             }
             else {
                 
-                self.badge.hidden = false
-                self.badge.frame = CGRectMake(self.badgeOriX, self.badgeOriY, 20, 20)
+                self.badge.isHidden = false
+                self.badge.frame = CGRect(x: self.badgeOriX, y: self.badgeOriY, width: 20, height: 20)
                 self.badge.textColor = _badgeTextColor
                 self.badge.backgroundColor = _badgeColor
                 self.badge.font = _badgeFont
-                self.badge.textAlignment = NSTextAlignment.Center
+                self.badge.textAlignment = NSTextAlignment.center
                 
                 self.customView?.addSubview(self.badge)
                 self.updateBadgeValueAnimated(true)
@@ -42,7 +42,7 @@ class BarButtonNumber : UIBarButtonItem {
         }
     }
     
-    var _badgeColor: UIColor = UIColor.redColor()
+    var _badgeColor: UIColor = UIColor.red
     var badgeColor: UIColor {
         
         get {
@@ -58,7 +58,7 @@ class BarButtonNumber : UIBarButtonItem {
         }
     }
     
-    var _badgeTextColor: UIColor = UIColor.whiteColor()
+    var _badgeTextColor: UIColor = UIColor.white
     var badgeTextColor: UIColor {
         
         get {
@@ -75,7 +75,7 @@ class BarButtonNumber : UIBarButtonItem {
 
     }
     
-    var _badgeFont: UIFont = UIFont.systemFontOfSize(10)
+    var _badgeFont: UIFont = UIFont.systemFont(ofSize: 10)
     var badgeFont : UIFont {
         
         get {
@@ -160,7 +160,7 @@ class BarButtonNumber : UIBarButtonItem {
     var shouldAnimateBadge = true
 
     
-    func initWithButton(button: UIButton) {
+    func initWithButton(_ button: UIButton) {
         
         self.customView = button
     }
@@ -195,7 +195,7 @@ class BarButtonNumber : UIBarButtonItem {
         
         minWidth = minWidth < minHeight ? minHeight : minWidth
         
-        self.badge.frame = CGRectMake(self.badgeOriX, self.badgeOriY, minWidth + padding, minHeight + padding)
+        self.badge.frame = CGRect(x: self.badgeOriX, y: self.badgeOriY, width: minWidth + padding, height: minHeight + padding)
         
         self.badge.layer.cornerRadius = (minHeight + padding) / 2
         self.badge.layer.masksToBounds = true
@@ -215,7 +215,7 @@ class BarButtonNumber : UIBarButtonItem {
     }
 
     
-    func updateBadgeValueAnimated(animated: Bool) {
+    func updateBadgeValueAnimated(_ animated: Bool) {
         
         if (animated && self.shouldAnimateBadge && !(self.badge.text == self.badgeValue)) {
             
@@ -225,7 +225,7 @@ class BarButtonNumber : UIBarButtonItem {
             animation.duration = 0.2
             animation.timingFunction = CAMediaTimingFunction(controlPoints: 0.4, 1.3, 1, 1)
             
-            self.badge.layer.addAnimation(animation, forKey: "bounceAnimation")
+            self.badge.layer.add(animation, forKey: "bounceAnimation")
         }
         
         self.badge.text = self.badgeValue
@@ -233,7 +233,7 @@ class BarButtonNumber : UIBarButtonItem {
         self.updateBadgeFrame()
     }
     
-    func duplicateLabel(labelToCopy: UILabel) -> UILabel {
+    func duplicateLabel(_ labelToCopy: UILabel) -> UILabel {
         
         let duplicateLabel = UILabel()
         duplicateLabel.text = labelToCopy.text
@@ -244,13 +244,13 @@ class BarButtonNumber : UIBarButtonItem {
     
     func removeBadge() {
         
-        UIView.animateWithDuration(0.2, animations: { () -> Void in
+        UIView.animate(withDuration: 0.2, animations: { () -> Void in
             
 //                self.badge.transform = CGAffineTransformMakeScale(0, 0)
-                self.badge.hidden = true            
-            }) { (Bool) -> Void in
+                self.badge.isHidden = true            
+            }, completion: { (Bool) -> Void in
                 
 //                self.badge.hidden = true
-        }
+        }) 
     }
 }
